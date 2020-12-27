@@ -114,11 +114,7 @@ public class Gameboard extends AbstractGameboard {
             }
         }
 
-        if (row >= getWinCon()) {
-            return true;
-        }
-
-        return false;
+        return row >= getWinCon();
     }
 
     @Override

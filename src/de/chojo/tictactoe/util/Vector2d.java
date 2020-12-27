@@ -20,6 +20,6 @@ public class Vector2d {
     }
 
     public Vector2d add(int x, int y) {
-        return new Vector2d( this.x + x, this.y + y);
+        return new Vector2d(this.x + x, this.y + y);
     }
 }
