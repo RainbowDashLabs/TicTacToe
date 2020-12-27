@@ -200,4 +200,8 @@ public abstract class AbstractGameboard {
     public int getCurrentPlayer() {
         return currentPlayer;
     }
+
+    public int getCurrTurn() {
+        return currTurn;
+    }
 }
