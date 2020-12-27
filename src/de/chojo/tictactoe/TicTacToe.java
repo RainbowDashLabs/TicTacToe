@@ -21,13 +21,15 @@ public class TicTacToe {
         gameboard.enablePrint(false);
         gameboard.playTillEnd(false);
         int games = 100000;
+        long time = System.nanoTime();
         for (int i = 0; i < games; i++) {
             runGame(gameboard, i + 1);
         }
-
+        time = System.nanoTime() - time;
         System.out.printf("Draw:  %d%nX Win: %d%nO Win: %d%nTurns: %d%n", draws, xWins, oWins, totalTurns);
         String turnWins = winTurn.entrySet().stream().map(e -> String.format("Turn %d : %d Wins", e.getKey(), e.getValue())).collect(Collectors.joining("\n"));
         System.out.println("Turn Wins:\n" + turnWins);
+        System.out.printf("Runtime:%nNanos: %d%nMillis: %d%nSeconds: %f", time, time / 1000000, time / 1000000000d);
     }
 
     /**
